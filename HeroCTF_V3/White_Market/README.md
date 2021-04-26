@@ -2,7 +2,7 @@
 
 ### Catégorie
 
-Prog
+Programming
 
 ### Description
 
@@ -36,7 +36,7 @@ We receive the following message:
 Do you want to try?(y/n)
 ```
 
-We answer yes, and we receive a big chunk of data that looks like this:
+We answer yes(y), and we receive a big chunk of data that looks like this:
 
 ```
 iVBORw0KGgoAAAANSUhEUgAAAgsAAAEYCAIAAABdlyIxAAAOLElEQVR4nO3caWyUZbvA8bt0E2WvoiJGgy[...]
@@ -56,15 +56,16 @@ I will use Python with the pwn module to comunicate with the server, base64 to t
 We have one more thing though: we have a time limit and writing an image+pytesseract is kinda slow.
 So we will run the program a couple times first to store id corresponding to each b64 chunk. We will do it this way:
 
-When recieving data:
+When receiving data:
 if we already have id ==> just get the associated price
-if not ==> Generate image, run pytesseract to retrieve id, then get the associated price
+if not ==> Generate image, run pytesseract to retrieve id, store id, then get the associated price
 
 This way, each time we run the program it will be faster, until we get enough/all ids and it gets fast enough.
 
 
 
-So here is the script:
+### Script
+
 ```python
 from pwn import remote
 import base64
@@ -143,7 +144,7 @@ r.close()
 ```
 
 
-###Execution:
+### Execution:
 ```
 [x] Opening connection to chall0.heroctf.fr on port 7005
 [x] Opening connection to chall0.heroctf.fr on port 7005: Trying 35.246.46.180
@@ -179,5 +180,21 @@ Ooooh... It's a little embarrassing, you're done calculating before me.
 WELL DONE ! You deserve a reward, take it: Hero{u_4r3_b3tt3r_th4n_4_r0b0t_!!}
 ```
 
+### TLDR
 
+Global idea:
+	use pwn to comunicate
+	for each data chunk received:
+	generate image, get id(pytesseract), send back price
 
+Speed optimization:
+I run the script a couple times to store id corresponding to each data, this way no need to generate image + run pytesseract every time.
+
+When receiving data:
+if we already have id ==> just get the associated price
+if not ==> Generate image, run pytesseract to retrieve id, store id, then get the associated price
+
+### Links
+
+pytesseract : https://pypi.org/project/pytesseract/
+pwn: https://python3-pwntools.readthedocs.io/en/latest/about.html#module-pwn
