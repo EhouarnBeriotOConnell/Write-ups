@@ -51,7 +51,7 @@ https://base64-to-image.com
 So, it is a barcode image with an id on it. We can check in the market.txt file, the id is associated to a price.
 
 Now we know what we have to do for each data chunk we receive: generate image from data, retreive id from it, get the corresponding price and send it back.
-I will use Python with the pwn module to comunicate with the server, base64 to translate base 64, PIL to handle images and pytesseract to retrieve id.
+I will use Python with the pwn module to communicate with the server, base64 to translate base 64, PIL to handle images and pytesseract to retrieve id.
 
 We have one more thing though: we have a time limit and writing an image+pytesseract is kinda slow.
 So we will run the program a couple times first to store id corresponding to each b64 chunk. We will do it this way:
@@ -183,7 +183,7 @@ WELL DONE ! You deserve a reward, take it: Hero{u_4r3_b3tt3r_th4n_4_r0b0t_!!}
 
 Global idea:
 	
-- use pwn to comunicate.
+- use pwn to communicate.
 - for each data chunk received: generate image, get id(pytesseract), send back price
 
 Speed optimization:
@@ -197,4 +197,5 @@ if not ==> Generate image, run pytesseract to retrieve id, store id, then get th
 ### Links
 
 pytesseract : https://pypi.org/project/pytesseract/
+
 pwn: https://python3-pwntools.readthedocs.io/en/latest/about.html#module-pwn
