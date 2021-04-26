@@ -191,7 +191,8 @@ Speed optimization:
 I run the script a couple times to store id corresponding to each data, this way no need to generate image + run pytesseract every time.
 
 When receiving data:
-if we already have id ==> just get the associated price
+if we already have id ==> just get the associated price.
+
 if not ==> Generate image, run pytesseract to retrieve id, store id, then get the associated price
 
 ### Links
