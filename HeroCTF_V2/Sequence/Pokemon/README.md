@@ -12,13 +12,12 @@ Fantominus, Lanturn, Ho-Oh, Vibraninf, Kranidos, ?
 
 Format: Hero{NOM}
 
+Author : xanhacks
+
 ### Hint
 
 Le mot "Pokedex" vous rappelle quelque chose ?
 
-### Auteur
-
-Enarior
 
 ### Solution
 

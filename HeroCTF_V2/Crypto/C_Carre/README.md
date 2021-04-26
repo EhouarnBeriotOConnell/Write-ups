@@ -14,13 +14,12 @@ flepae_hc_ceicir
 
 Format: Hero{plaintext}
 
+Author : xanhacks
+
 ### Hint
 
 L=4
 
-### Auteur
-
-Enarior
 
 ### Solution
 

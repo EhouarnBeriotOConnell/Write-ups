@@ -21,13 +21,11 @@ Flag: Hero{100}
 
 Format: Hero{nombre}
 
+Author : xanhacks
 ### Fichier
 
 [corona.csv](corona.csv)
 
-### Auteur
-
-Enarior
 
 ### Solution
 

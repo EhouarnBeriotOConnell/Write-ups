@@ -12,9 +12,7 @@ Suite : 17, 52, 26, 13, 40, 20, 10, 5, ..., ..., ...
 
 Format : HeroCTF{x, y, z} avec x, y et z les 3 valeurs complétant la suite
 
-### Auteur
-
-Enarior
+Author : SoEasy
 
 ### Solution
 

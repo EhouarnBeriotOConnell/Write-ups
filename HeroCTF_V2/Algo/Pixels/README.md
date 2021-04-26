@@ -10,13 +10,12 @@ Vous devez compter le nombre de pixels NON noir.
 
 Format: Hero{nombre}
 
+Author : xanhacks
+
 ### Fichier
 
 [image.png](image.png)
 
-### Auteur
-
-Enarior
 
 ### Solution
 
