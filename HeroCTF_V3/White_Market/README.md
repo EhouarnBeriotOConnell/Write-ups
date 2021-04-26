@@ -187,10 +187,10 @@ Global idea:
 - use pwn to comunicate.
 - for each data chunk received: generate image, get id(pytesseract), send back price
 
-Speed optimization:\n
+Speed optimization:
 I run the script a couple times to store id corresponding to each data, this way no need to generate image + run pytesseract every time.
 
-When receiving data:\n
+When receiving data:
 if we already have id ==> just get the associated price
 if not ==> Generate image, run pytesseract to retrieve id, store id, then get the associated price
 
