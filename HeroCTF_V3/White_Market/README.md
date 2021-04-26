@@ -63,7 +63,6 @@ if not ==> Generate image, run pytesseract to retrieve id, store id, then get th
 This way, each time we run the program it will be faster, until we get enough/all ids and it gets fast enough.
 
 
-
 ### Script
 
 ```python
